@@ -1,4 +1,17 @@
 public String whichTwo(Integer a, Integer b, Integer c) {
     //code here
-    return a>b?(a>c?(a==b+c?'a':''):(c==a+b?'c':'')):(b>c?(b==a+c?'b':''):(c==a+b?'c':''));
+    String sum;
+   if (a==b+c){
+       sum='a';
+   }
+   else if (b==c+a){
+       sum='b'
+   }
+   else if (c==a+b){
+       sum ='c';
+   }
+   else {
+       sum='';
+   }
+   return sum;
 }
