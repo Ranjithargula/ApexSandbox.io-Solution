@@ -1,0 +1,5 @@
+public String aOrAn(String word) {
+    String str = word.toLowerCase().startsWith('a') || word.toLowerCase().startsWith('e') || word.toLowerCase().startsWith('i') || word.toLowerCase().startsWith('o') || word.toLowerCase().startsWith('u') ? 'an ' + word : 'a ' + word;
+    
+    return str;
+}
