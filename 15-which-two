@@ -5,7 +5,7 @@ public String whichTwo(Integer a, Integer b, Integer c) {
        sum='a';
    }
    else if (b==c+a){
-       sum='b'
+       sum='b';
    }
    else if (c==a+b){
        sum ='c';
