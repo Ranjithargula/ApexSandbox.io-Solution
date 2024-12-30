@@ -1,8 +1,8 @@
 public Integer sumToN(Integer n) {
     //code here
     Integer sum=0;
-    for (Integer i=1;i<=num;i++){
-        if(Math.mod(num,i)==0){
+    for (Integer i=1;i<=n;i++){
+        if(Math.mod(n,i)==0){
             sum+=i;
         }
     }
