@@ -1,4 +1,4 @@
 public String formatName(String firstName, String lastName) {
     //code here
-    return (lastName!='' && firstName!='') ?lastName+', '+firstName:(lastName!=''?lastName:firstName!=''?firstName:'');
-}
+    return String.isBlank(firstName)?lastName:String.isBlank(lastName)?firstName:lastName+', '+firstName;
+} 
