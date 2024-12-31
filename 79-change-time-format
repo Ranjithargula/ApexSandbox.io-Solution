@@ -12,4 +12,5 @@ public String changeTimeFormat(String strTime) {
     else{
         changedFormat=strTime+' AM';
     }
+    return changedFormat;
 }
