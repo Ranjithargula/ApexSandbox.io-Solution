@@ -1,0 +1,15 @@
+public String changeTimeFormat(String strTime) {
+    //code here
+    String changedFormat;
+    String hour=strTime.substring(0,strTime.indexOf(':'));
+    String minutes=strTime.substring(strTime.indexOf(':'),strTime.length());
+    if(Integer.valueOf(hour)>12 ){
+        changedFormat= (Integer.valueOf(hour)-12)+minutes+' PM';
+    }
+    else if(Integer.valueOf(hour)==0){
+        changedFormat=(Integer.valueOf(hour)+12)+minutes+' AM';
+    }
+    else{
+        changedFormat=strTime+' AM';
+    }
+}
