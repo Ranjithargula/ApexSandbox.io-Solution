@@ -1,7 +1,7 @@
 public Integer nextPrime(Integer num) {
     //code here
     Integer nextprime;
-    for (Integer i=num;i<num+100;i++){
+    for (Integer i=num+1;i<num+100;i++){
         Integer count=0;
         for(Integer j=1;j<=i;j++){
             if(Math.mod(i,j)==0){
