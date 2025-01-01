@@ -2,11 +2,15 @@ public Integer nextPrime(Integer num) {
     //code here
     Integer nextprime;
     for (Integer i=num;i<num+100;i++){
-        for(Integer j=2;j<i;j++){
+        for(Integer j=1;j<=i;j++){
+            Integer count;
             if(Math.mod(i,j)==0){
-                nextprime=i;
-                break;
+                count++;
             }
+        }
+        if(count>2){
+            nextprime=i;
+            Break;
         }
     }
     return nextprime;
