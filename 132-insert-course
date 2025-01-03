@@ -1,0 +1,13 @@
+public Id insertCourse(String name, String details, Integer credits) {
+    apxio__Course__c course= new apxio__Course__c();
+    course.Name=name;
+    course.apxio__Course_Details__c=details;
+    course.apxio__Credits__c=credits;
+    try{
+        insert(course);
+        return course.Id;
+    }
+    catch(DMLException e){
+         return null;
+    }
+}
