@@ -1,9 +1,7 @@
 public Id insertStudent(String name, String email) {
-    // code here
-    apxio__Student__c stdnt = new apxio__Student__c();
-    stdnt.Name=name;
-    stdnt.apxio__Email__c=email;
-    Database.insert(stdnt);
-    
-    return stdnt.Id;
+    apxio__Student__c stdt= new apxio__Student__c();
+    stdt.Name=name;
+    stdt.apxio__Email__c=email;
+    insert(stdt);
+    return stdt.Id;
 }
