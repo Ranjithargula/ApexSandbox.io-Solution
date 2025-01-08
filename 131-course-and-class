@@ -2,13 +2,21 @@ public void createCourseAndClass(String name, String description) {
     // code here
     apxio__Course__c course = new apxio__Course__c();
     course.Name = name;
+    if(description<>null){
+        course.apxio__Course_Details__c=description;
+    }
+    else{
+        course.apxio__Course_Details__c=null;
+    }
+    Database.Insert(course);
     apxio__Class__c clase=new apxio__Class__c();
     clase.apxio__Course__c=course.Id;
     clase.Name=course.Name;
     if(description<>null){
         clase.apxio__Description__c=description.left(255);
-        course.apxio__Course_Details__c=description;
     }
-    Database.Insert(course);
+    else{
+        clase.apxio__Description__c=null;
+    }
     Database.Insert(clase);
 }
