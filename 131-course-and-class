@@ -1,0 +1,12 @@
+public void createCourseAndClass(String name, String description) {
+    // code here
+    apxio__Course__c course = new apxio__Course__c();
+    course.Name = name;
+    course.apxio__Description__c=description;
+    Database.Insert(course);
+    apxio__Class__c clase=new apxio__Class__c();
+    clase.apxio__Course__c=course.Id;
+    clase.Name=course.Name;
+    clase.apxio__Description__c=description.substring(0,255);
+    Database.Insert(clase);
+}
