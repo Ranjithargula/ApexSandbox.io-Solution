@@ -6,7 +6,7 @@ public List<Account> checkAccounts(List<Account> accounts)
     else{
         Integer count=0;
         for(Account acc : accounts){
-            if(acc.BillingCity==null || acc.BillingCity==''){
+            if(acc.BillingCity==null || acc.BillingCity.isEmpty()){
                 count++;
             }
         }
