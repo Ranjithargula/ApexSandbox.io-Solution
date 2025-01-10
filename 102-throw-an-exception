@@ -1,6 +1,6 @@
 public List<Account> checkAccounts(List<Account> accounts)
 {
-    if(accounts==null or accounts.size()==0){
+    if(accounts==null || accounts.size()==0){
         throw new IllegalArgumentException('accounts should not be null');
     }
     else{
