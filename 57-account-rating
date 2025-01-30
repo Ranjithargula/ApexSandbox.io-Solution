@@ -14,6 +14,7 @@ public void setAccountRating(Account a) {
     }
     a.Type='Customer - Direct';
     a.Industry='Apparel';
+    a.Name='ApexSandboxIO';
     Database.Insert(a);
     // Database.Update(a);
 }
