@@ -1,5 +1,6 @@
 public void setAccountRating(Account a) {
     //code here
+    Database.Insert(a);
     Account acc=[Select Id,AnnualRevenue,Rating from Account where Id =:a.Id LIMIT 1];
     if(acc==null || acc.AnnualRevenue==null){
         return;
