@@ -12,6 +12,7 @@ public void setAccountRating(Account a) {
     else if(a.AnnualRevenue>500000){
         a.Rating='Hot';
     }
+    a.Type='Customer - Direct'
     Database.Insert(a);
     // Database.Update(a);
 }
