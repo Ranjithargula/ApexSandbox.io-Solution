@@ -1,18 +1,17 @@
 public void setAccountRating(Account a) {
     //code here
-    Database.Insert(a);
-    Account acc=[Select Id,AnnualRevenue,Rating from Account where Id =:a.Id LIMIT 1];
-    if(acc==null || acc.AnnualRevenue==null){
+    if(a==null || a.AnnualRevenue==null){
         return;
     }
-    else if(acc.AnnualRevenue<=100000){
-        acc.Rating='Cold';
+    else if(a.AnnualRevenue<=100000){
+        a.Rating='Cold';
     }
-    else if(acc.AnnualRevenue>=100000 && acc.AnnualRevenue<=500000){
-        acc.Rating='Warm';
+    else if(a.AnnualRevenue>=100000 && a.AnnualRevenue<=500000){
+        a.Rating='Warm';
     }
-    else if(acc.AnnualRevenue>500000){
-        acc.Rating='Hot';
+    else if(a.AnnualRevenue>500000){
+        a.Rating='Hot';
     }
-    Database.Update(acc);
+    Database.Insert(a);
+    // Database.Update(a);
 }
