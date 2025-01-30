@@ -13,7 +13,7 @@ public void setAccountRating(Account a) {
         a.Rating='Hot';
     }
     a.Type='Customer - Direct';
-    a.Industry='Apparel'
+    a.Industry='Apparel';
     Database.Insert(a);
     // Database.Update(a);
 }
