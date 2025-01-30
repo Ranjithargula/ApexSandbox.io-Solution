@@ -1,5 +1,6 @@
 public void setAccountRating(Account a) {
     //code here
+    Account a=[Select Id,AnnualRevenue,Rating from Account where Id:=a.Id];
     if(a==null || a.AnnualRevenue==null){
         return;
     }
